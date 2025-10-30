@@ -1,0 +1,84 @@
+/* src/pages/PaginaPublica.css */
+/* COLE ISTO */
+
+.public-container {
+  max-width: 900px;
+  margin: 2rem auto; /* Centraliza e dá espaço do topo */
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Header simples (só o logo) */
+.public-header {
+  padding: 1rem 2rem;
+  background-color: #666; /* Cinza escuro */
+  color: white;
+  position: absolute; /* Fica no topo da tela */
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.public-header .logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Ajusta o container para começar abaixo do header */
+.public-content {
+  margin-top: 80px; /* Altura do header + espaço */
+}
+
+.public-content h1 {
+  margin-top: 0;
+}
+
+.public-content .dono-info {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
+}
+
+/* A lista de itens (só leitura) */
+.public-item-linha {
+  display: grid;
+  grid-template-columns: 30px 1fr auto; /* Checkbox, Nome/Link, Preço */
+  gap: 1rem;
+  align-items: center;
+  padding: 0.75rem 0.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.public-item-linha input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  /* Desabilita o clique, é só leitura */
+  pointer-events: none; 
+}
+
+/* Reutiliza o estilo de nome/link que já fizemos */
+.item-nome-link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.item-nome {
+  font-weight: 500;
+  font-size: 1rem;
+}
+.item-link {
+  font-size: 0.85rem;
+  color: #007bff;
+  text-decoration: none;
+}
+.item-link:hover {
+  text-decoration: underline;
+}
+
+.item-preco {
+  color: #333;
+  font-size: 0.9rem;
+}

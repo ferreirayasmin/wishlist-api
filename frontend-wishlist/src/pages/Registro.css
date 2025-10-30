@@ -1,0 +1,105 @@
+/* src/pages/Registro.css */
+/* COLE ESTE CÓDIGO INTEIRO */
+
+.register-container-white {
+  display: flex;
+  flex-direction: column; /* Empilha os itens verticalmente */
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Tela cheia */
+  width: 100vw; /* Tela cheia */
+  background-color: #ffffff; /* FUNDO BRANCO! */
+  text-align: center; 
+  padding: 2rem;
+  box-sizing: border-box; /* Garante que o padding não quebre a tela */
+}
+
+.register-container-white h2 {
+  font-size: 24px;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  color: #000; /* Cor do texto preta */
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px; /* Largura máxima do formulário */
+}
+
+.input-group {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 14px;
+  font-weight: 500;
+  color: #000; /* Cor do texto preta */
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: none; /* Sem borda */
+  background-color: #f0f2f5; /* COR CINZA CLARO DO INPUT (do seu wireframe) */
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.register-button {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #888; /* COR CINZA MÉDIO DO BOTÃO (do seu wireframe) */
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.register-button:hover {
+  background-color: #555;
+}
+
+.login-link {
+  margin-top: 1.5rem;
+  font-size: 14px;
+  color: #000;
+}
+
+.login-link a {
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Mensagens de erro e sucesso */
+.error-message {
+  color: #d93025;
+  background-color: #fdd;
+  border: 1px solid #d93025;
+  padding: 0.75rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+.success-message {
+  color: #1e8e3e;
+  background-color: #e6f4ea;
+  border: 1px solid #1e8e3e;
+  padding: 0.75rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}

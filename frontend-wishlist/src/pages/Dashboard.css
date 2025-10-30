@@ -1,0 +1,200 @@
+/* src/pages/Dashboard.css */
+
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza o botão de criar */
+  width: 100%;
+}
+
+/* Este é o estilo do botão (largo e cinza) */
+.create-list-button {
+  background-color: #e0e0e0;
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 2.5rem;
+  min-width: 400px; /* Faz ele ficar largo como no Figma */
+  box-sizing: border-box;
+}
+
+.create-list-button:hover {
+  background-color: #cccccc;
+}
+
+.dashboard-container h2 {
+  width: 100%;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.5rem;
+}
+
+/* Este é o estilo da "Grade" (para os cards ficarem lado a lado) */
+.list-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem; 
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+/* O CSS abaixo (dos cards) é o que JÁ ESTÁ FUNCIONANDO
+*/
+
+.list-card {
+  background: #f5f5f5; 
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden; 
+}
+
+.list-card-header {
+  background: #888;
+  color: white;
+  padding: 0.75rem 1rem;
+}
+
+.list-card-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.list-card-body {
+  padding: 1rem;
+  color: #555;
+  font-size: 1rem;
+  min-height: 50px; 
+}
+
+.list-card-actions {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0 1rem 1rem 1rem;
+}
+
+.card-button {
+  flex: 1;
+  background: #888;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.card-button:hover {
+  background: #666;
+}
+
+/* src/pages/Dashboard.css */
+/* ADICIONE ESTE CÓDIGO NO FINAL DO ARQUIVO */
+
+.create-form-container {
+  width: 100%;
+  max-width: 600px; /* Largura do formulário de criação */
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.create-form-container h3 {
+  margin-top: 0;
+}
+
+.create-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.create-form .input-group {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.create-form .input-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.create-form .input-group input,
+.create-form .input-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Importante */
+}
+
+.create-form-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.form-button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.form-button-save {
+  background-color: #007bff; /* Azul */
+  color: white;
+}
+
+.form-button-cancel {
+  background-color: #ddd; /* Cinza */
+  color: #333;
+}
+
+/* src/pages/Dashboard.css */
+/* ADICIONE ESTE CÓDIGO NO FINAL DO ARQUIVO */
+
+/* Estilos para o formulário de EDIÇÃO dentro do card */
+.list-card-edit-form {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.list-card-edit-form input,
+.list-card-edit-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.list-card-edit-form .list-card-actions {
+  /* Reusa o estilo dos botões, mas sem padding extra */
+  padding: 0;
+}
+
+/* src/pages/Dashboard.css */
+/* ADICIONE ISTO NO FINAL */
+
+/* Estilo para o link do título do card */
+.list-card-header a {
+  color: white; /* Deixa o texto branco */
+  text-decoration: none; /* Tira o sublinhado */
+}
+
+.list-card-header a:hover {
+  text-decoration: underline; /* Adiciona sublinhado SÓ ao passar o mouse */
+}

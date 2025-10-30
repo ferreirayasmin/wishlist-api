@@ -1,0 +1,246 @@
+
+
+/* src/pages/ListaDetalhes.css */
+/* APENAS EDITE ESTA PRIMEIRA REGRA */
+
+.detalhes-container {
+  max-width: 900px; /* Define a largura máxima do seu conteúdo */
+  margin: 0 auto;  /* Centraliza o container na página */
+  padding: 2rem;   /* Adiciona um espaçamento interno */
+  background-color: #fff; /* Fundo branco para a área central do conteúdo */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.detalhes-header {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1rem;
+}
+
+.detalhes-header h1 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.link-publico {
+  margin-top: 1rem;
+  background-color: #f0f0f0;
+  padding: 0.75rem;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link-publico span {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9rem;
+  overflow-wrap: break-word; /* Quebra o link se for muito grande */
+}
+
+.link-publico button {
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+/* O formulário de "Adicionar Item" (do seu figma) */
+.add-item-container {
+  background: #f5f5f5; /* O cinza claro do seu figma */
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+.add-item-container h3 {
+  margin-top: 0;
+}
+
+.add-item-form {
+  display: grid;
+  /* Cria 2 colunas, mas o botão vai para a 3ª */
+  grid-template-columns: 1fr 1fr; 
+  gap: 1rem;
+  align-items: flex-end; /* Alinha o botão com os inputs */
+}
+
+.add-item-form .input-group {
+  text-align: left;
+}
+
+.add-item-form .input-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.add-item-form .input-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.add-item-form button {
+  padding: 0.75rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  height: calc(2.25rem + 2px); /* Altura do botão = altura do input */
+  white-space: nowrap; /* Impede que o texto quebre */
+}
+
+/* A lista de itens que já existem */
+.itens-list-container {
+  margin-top: 2rem;
+}
+
+.item-linha {
+  display: grid;
+  /* 5 colunas: Checkbox, Nome, Preço, Ações, Ações */
+  grid-template-columns: 30px 1fr auto 50px 50px;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.75rem 0.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.item-linha:hover {
+  background-color: #f9f9f9;
+}
+
+.item-linha input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.item-nome {
+  font-weight: 500;
+}
+
+.item-preco {
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.item-acao-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  font-size: 1.2rem; /* Tamanho do ícone */
+}
+
+.item-acao-button:hover {
+  opacity: 0.7;
+}
+
+/* src/pages/ListaDetalhes.css */
+/* ADICIONE ESTE CÓDIGO NO FINAL DO ARQUIVO */
+
+/* Estilo para a LINHA quando está em modo de edição */
+.item-linha-edit {
+  display: grid;
+  /* 4 colunas: Nome, Preço, Ação, Ação */
+  grid-template-columns: 1fr auto 50px 50px;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.75rem 0.5rem;
+  background-color: #f0f0f0; /* Destaca a linha em edição */
+  border-bottom: 1px solid #eee;
+}
+
+.item-linha-edit input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* src/pages/ListaDetalhes.css */
+/* ADICIONE ESTE CÓDIGO NO FINAL DO ARQUIVO */
+
+/* Estilo para a LINHA quando está em modo de edição */
+.item-linha-edit {
+  padding: 1rem;
+  background-color: #f9f9f9; /* Um fundo mais claro para o form */
+  border-bottom: 1px solid #eee;
+  border-left: 3px solid #007bff; /* Destaque azul */
+}
+
+/* O container dos inputs */
+.item-edit-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem; /* Espaço entre os inputs */
+  margin-bottom: 1rem;
+}
+
+.item-linha-edit input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Os botões de ação (Salvar/Cancelar) */
+.item-edit-actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end; /* Alinha à direita */
+}
+
+.item-edit-actions button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.item-edit-actions .form-button-cancel {
+  background-color: #ddd;
+  color: #333;
+}
+
+.item-edit-actions .form-button-save {
+  background-color: #007bff; /* Botão Salvar azul */
+  color: white;
+}
+
+/* src/pages/ListaDetalhes.css */
+/* ADICIONE ESTE CÓDIGO NO FINAL DO ARQUIVO */
+
+/* Este é o novo 'container' para o nome E o link */
+.item-nome-link {
+  display: flex;
+  flex-direction: column; /* Coloca o link abaixo do nome */
+  gap: 0.25rem; /* Pequeno espaço entre eles */
+}
+
+/* O nome do item (como já era) */
+.item-nome {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+/* O novo link (para 'Ver na Loja') */
+.item-link {
+  font-size: 0.85rem; /* Texto menor */
+  color: #007bff; /* Azul */
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.item-link:hover {
+  text-decoration: underline;
+}
