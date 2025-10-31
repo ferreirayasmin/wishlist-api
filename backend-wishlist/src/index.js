@@ -1,14 +1,17 @@
 // src/index.js
+// APAGUE TUDO E COLE ESTE CÓDIGO COMPLETO
+
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 
 const supabase = require('./supabaseClient'); 
 
-// === IMPORTAR ROTAS ===
+// === IMPORTAR TODAS AS ROTAS ===
 const authRoutes = require('./routes/authRoutes');
 const listasRoutes = require('./routes/listasRoutes');
-const itensRoutes = require('./routes/itensRoutes'); // (NOVO)
+const itensRoutes = require('./routes/itensRoutes');
+const publicRoutes = require('./routes/publicRoutes'); // (A ROTA PÚBLICA)
 
 const app = express();
 const PORT = process.env.PORT || 8080;
@@ -24,11 +27,16 @@ app.get('/', (req, res) => {
 });
 
 // === USAR ROTAS ===
+
+// (A LINHA QUE FALTAVA)
+// Diz ao Express: "Qualquer rota que começar com /public, 
+// mande para o arquivo 'publicRoutes'"
+app.use('/public', publicRoutes);
+
+// Rotas Privadas (Usam auth)
 app.use('/auth', authRoutes);
 app.use('/listas', listasRoutes);
-app.use('/itens', itensRoutes); // (NOVO)
-
-// (Aqui virá o endpoint público...)
+app.use('/itens', itensRoutes);
 
 // === Iniciar Servidor ===
 app.listen(PORT, () => {
